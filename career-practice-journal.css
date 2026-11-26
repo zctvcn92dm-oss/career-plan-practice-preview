@@ -1,0 +1,172 @@
+.journal-page { --journal-ink:#193c35; --journal-muted:#526c65; --journal-line:#dceae5; --journal-accent:#117666; min-height:100dvh; background:#f3f8f6; color:var(--journal-ink); }
+.journal-header { display:grid; grid-template-columns:44px 1fr 44px; align-items:center; min-height:58px; padding:0 13px; background:#fafffd; border-bottom:1px solid var(--journal-line); }
+.journal-header h1 { margin:0; text-align:center; font-size:16px; font-weight:750; }
+.journal-header button { min-height:44px; font-size:28px; text-align:left; padding-left:8px; }
+.journal-main { display:grid; gap:14px; padding:16px 14px 32px; }
+.journal-entry,.journal-intro { background:linear-gradient(115deg,#ebfaf3,#f8fffc); border:1px solid #cde9df; border-radius:18px; padding:16px; }
+.journal-kicker { display:block; margin-bottom:5px; color:#176b5c; font-size:11px; font-weight:700; letter-spacing:.07em; }
+.journal-entry h3,.journal-intro h2 { font-size:17px; color:#193c35; letter-spacing:-.02em; }
+.journal-entry button:first-child,.journal-intro button:first-of-type { background:#117666; color:white; }
+.journal-entry button,.journal-intro button { min-height:40px; border-radius:9px; }
+.journal-timeline { display:grid; gap:12px; padding-left:10px; border-left:1px solid #c5e1d7; margin-left:5px; }
+.journal-record { position:relative; min-width:0; border:1px solid var(--journal-line); border-radius:15px; }
+.journal-record::before { content:''; position:absolute; left:-15px; top:26px; width:7px; height:7px; background:#299784; border-radius:50%; }
+.journal-record strong { margin:7px 0 4px; font-size:15px; }
+.journal-meta { display:flex; align-items:center; flex-wrap:wrap; gap:7px; font-size:11px; color:var(--journal-muted); }
+.journal-tag { background:#e3f4ee; color:#176b5c; padding:3px 7px; border-radius:5px; font-weight:700; }
+.journal-snippet { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:12px; color:#365c52; margin-top:6px; }
+.journal-snippet.is-empty { color:var(--journal-muted); }
+.journal-empty { padding:24px 20px; color:var(--journal-muted); font-size:13px; line-height:1.7; border-style:dashed; }
+.journal-form { display:grid; gap:12px; }
+.journal-group { display:grid; gap:11px; min-width:0; border:1px solid var(--journal-line); background:#fff; border-radius:16px; padding:15px; }
+.journal-group h2 { font-weight:750; font-size:15px; }
+.journal-group :is(input:not([type=checkbox]),select,textarea) { box-sizing:border-box; min-width:0; min-height:42px; background:#f6faf8; border:1px solid #d6e6df; border-radius:9px; }
+.journal-group :is(input,select,textarea):focus-visible,.journal-page button:focus-visible { outline:2px solid var(--journal-accent); outline-offset:2px; }
+.journal-save { position:sticky; bottom:0; z-index:5; margin:0 -14px -32px; background:#fafffd; border-top:1px solid var(--journal-line); padding:10px 14px calc(10px + env(safe-area-inset-bottom)); }
+.journal-save p:not(:empty) { margin-bottom:6px; }
+.journal-save button { min-height:46px; background:#117666; color:#fff; }
+.journal-detail { border-radius:18px; line-height:1.65; }
+.journal-detail > h2 { font-size:21px; }
+.journal-reflection { background:#eaf7f1; border-radius:12px; padding:12px; }
+.journal-reflection h3 { margin-bottom:5px; }
+.journal-utilities { border-top:1px solid var(--journal-line); padding-top:12px; }
+.journal-utilities button { background:transparent; color:#375d52; min-height:40px; }
+.journal-hero-tools { position:absolute; z-index:5; top:98px; right:13px; }
+.journal-hero-tools + .career-hero-copy { padding-top:49px; }
+.journal-hero-tools .journal-home-link { color:#153e37; }
+.journal-hero-tools .journal-home-link span:last-child { color:inherit; }
+.journal-home-link { display:inline-flex; align-items:center; gap:7px; min-height:44px; padding:0 8px; border-radius:8px; color:#315e54; font-size:13px; font-weight:600; }
+.journal-home-icon { font-size:12px; }
+.journal-home-link span:last-child { color:#54776e; font-size:16px; }
+.journal-home-link:focus-visible { outline:2px solid #117666; outline-offset:2px; }
+.planning-home { min-height:100dvh; background:linear-gradient(#e5f7f1,#f6f9f8 65%); color:#183931; }
+.planning-header { background:#fff; }
+.planning-header .mini-nav { height:55px; }
+.planning-header .mini-capsule { width:66px; height:32px; border-color:#e4eeea; }
+.planning-header .mini-ring { width:14px; height:14px; border-width:2px; }
+.planning-content { display:grid; gap:12px; padding:20px 17px calc(32px + env(safe-area-inset-bottom)); }
+.planning-heading { margin:0; font-size:21px; font-weight:800; }
+.planning-content .career-plan-card { margin:0; border:1px solid #dceae5; border-radius:16px; }
+.planning-content .planning-primary { border-color:#8dcdbe; border-radius:19px; box-shadow:0 4px 14px #14594e14; }
+.planning-primary .career-plan-name { font-size:19px; }
+.planning-primary .career-plan-chevron { display:none; }
+.planning-view,.planning-create { display:flex; align-items:center; justify-content:center; gap:6px; min-height:44px; border-radius:11px; font-size:15px; font-weight:750; }
+.planning-view { width:100%; margin:10px 0 0; background:#087d67; color:white; }
+.planning-create { width:100%; border:1px solid #329480; background:#f9fffc; color:#08745e; }
+.planning-create.is-first { color:#fff; background:#087d67; }
+.planning-empty { padding:18px; border:1px solid #8dcdbe; border-radius:16px; background:white; }
+.planning-empty h3 { font-size:17px; font-weight:750; }
+.planning-empty p { margin-top:6px; font-size:13px; color:#536d64; }
+.planning-record { display:grid; grid-template-columns:36px 1fr auto; align-items:center; gap:11px; min-height:66px; text-align:left; padding:10px 13px; border:1px solid #d8eae3; border-radius:15px; background:#f8fcfa; }
+.planning-record-icon { display:grid; place-items:center; width:36px; height:36px; border-radius:10px; background:#e8f6ef; color:#167b64; }
+.planning-record strong,.planning-record small { display:block; }
+.planning-record strong { font-size:15px; }
+.planning-record small { margin-top:3px; font-size:11px; color:#536d64; }
+.planning-record-arrow { color:#567d71; font-size:20px; }
+.compact-record-entry { width:100%; margin-top:10px; min-height:54px; padding:6px 12px; }
+.compact-record-entry .planning-record-icon { width:32px; height:32px; }
+.compact-record-entry strong { font-size:13px; }
+.planning-growth { display:flex; justify-content:space-between; gap:8px; padding:8px 2px; color:#436960; font-size:12px; text-align:left; }
+.planning-growth span:last-child { color:#08745e; }
+.planning-other-heading { margin:4px 0 0; }
+.planning-content .career-home-note { margin:0; color:#536d64; }
+.planning-home button:focus-visible { outline:2px solid #117666; outline-offset:2px; }
+.ref-home {background:#edf7f6;}
+.ref-home .career-hero {min-height:289px;background:linear-gradient(110deg,#f0f8fb 10%,#c7f6ef 70%,#edf9e8);}
+.ref-home .mini-status-bar {height:35px;}
+.ref-home .mini-nav {height:40px;}
+.ref-home .mini-capsule {width:69px;height:27px;}
+.ref-home .mini-ring {width:14px;height:14px;}
+.ref-home .career-hero-copy {padding:12px 23px 0;}
+.ref-home .career-hero-title {color:#132d3e;font-size:clamp(18px,5.55vw,23px);line-height:1.35;}
+.ref-home .career-hero-title span {color:#008f9e;background:linear-gradient(90deg,#0088e8,#00c59e);background-clip:text;-webkit-text-fill-color:transparent;}
+.ref-home .career-hero-desc {font-size:11px;line-height:1.6;margin-top:10px;color:#38505b;}
+.ref-home .career-compass {width:44%;height:auto;right:16px;top:85px;}
+.ref-home .career-hero-pills {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:25px 20px 0;padding:0;}
+.ref-home .career-hero-pill {display:flex;justify-content:flex-start;align-items:center;gap:6px;padding:7px 8px;background:#ffffff70;border:0;border-radius:12px;text-align:left;color:#1a3035;}
+.ref-home .career-hero-pill i {display:grid;place-items:center;flex:none;width:21px;height:22px;border-radius:7px;background:#00a9a6;color:white;font-size:10px;}
+.ref-home .career-hero-pill b,.ref-home .career-hero-pill small {display:block;white-space:nowrap;font-size:clamp(7px,2.2vw,9px);}
+.ref-home .career-hero-pill small {color:#627c85;font-weight:400;}
+.ref-home .career-home-body {margin-top:-17px;padding-inline:20px;}
+.ref-home .career-growth-card {border:0;border-radius:13px;padding:11px;background:#fbfcfc;}
+.ref-home .career-growth-title {font-size:11px;}
+.ref-home .career-growth-desc {font-size:9px;}
+.ref-home .career-growth-link {font-size:9px;padding:5px 8px;background:#eaf7f5;border-radius:14px;color:#008b82;}
+.ref-home .career-plan-card {border:0;border-radius:14px;background:#fbfcfc;}
+.ref-home .career-plan-icon {border-radius:50%;background:linear-gradient(145deg,#16cfaa,#009cba);}
+.ref-home .career-section-heading h2 {font-size:13px;}
+.ref-all {color:#008d85;font-size:9px;font-weight:650;min-height:32px;}
+.ref-home-record {display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;width:100%;text-align:left;border-top:1px solid #e6efed;margin-top:9px;padding:9px 0 0;color:#243a42;}
+.ref-home-record i:first-child {display:grid;place-items:center;width:27px;height:27px;border-radius:11px;color:#279d84;background:#e2f1ed;}
+.ref-home-record i:last-child {color:#789b9d;font-size:9px;margin-right:8px;}
+.ref-home-record strong,.ref-home-record small {display:block;font-size:9px;}
+.ref-home-record small {color:#627888;margin-top:2px;}
+.journal-page {background:#f4f7f6;color:#172735;}
+.journal-header {min-height:53px;background:#fafbfb;}
+.journal-header h1 {font-size:16px;}
+.journal-main {padding:15px 15px 25px;}
+.ref-list,.ref-archive {min-width:0;}
+.ref-list-intro,.ref-archive-intro {padding:14px 13px;border-radius:11px;background-color:#e2f6ee;background-repeat:no-repeat;box-shadow:0 3px 10px #1b55430e;}
+.ref-list-intro {background-image:url('./assets/practice-reference-a.png');background-position:right bottom;background-size:auto 75%;min-height:164px;}
+.ref-archive-intro {padding-left:27%;background-image:url('./assets/practice-reference-c.png'),linear-gradient(105deg,#bceadc,#f4faf8 65%);background-position:7% center,center;background-size:21% auto,cover;}
+.ref-list-intro .journal-kicker,.ref-archive-intro .journal-kicker {display:inline-block;background:#d2f0e5;border-radius:12px;padding:5px 9px;margin-bottom:10px;color:#007c64;letter-spacing:0;}
+.ref-list-intro h2,.ref-archive-intro h2 {font-size:17px;font-weight:800;line-height:1.35;}
+.ref-list-intro p,.ref-archive-intro p {font-size:10px;line-height:1.65;color:#546365;margin:9px 0 12px;}
+.ref-actions {display:flex;gap:9px;flex-wrap:wrap;}
+.ref-actions button {min-height:34px;padding:0 11px;background:#fff;border:1px solid #cee9de;border-radius:8px;color:#00795d;font-size:12px;}
+.ref-actions button:first-child {background:#007354;color:white;border-color:#007354;font-weight:700;}
+.ref-list-tools {display:flex;justify-content:space-between;align-items:center;margin:24px 0 13px;font-size:12px;}
+.ref-list-tools button {font-size:10px;min-height:21px;}
+.ref-list-tools i,.journal-meta b {color:#008c71;}
+.ref-list .journal-timeline,.ref-archive .journal-timeline {padding-left:12px;margin-left:7px;gap:12px;}
+.ref-archive .journal-timeline {margin-top:18px;padding-left:19px;gap:18px;}
+.ref-record {display:block;width:100%;padding:13px 33px 12px 12px;text-align:left;background:#fbfcfc;min-height:101px;overflow-wrap:anywhere;}
+.ref-record strong {display:block;font-size:16px;margin-top:9px;}
+.ref-record .journal-meta {gap:4px;font-size:10px;}
+.ref-card-icon {position:absolute;right:15px;top:20px;color:#30433f;font-size:10px;}
+.ref-archive .ref-record {min-height:130px;padding:14px;}
+.ref-archive .ref-record strong {margin-top:18px;}
+.ref-archive .ref-record strong:after {content:'';display:block;width:16px;height:1px;background:#25af92;margin:10px 0 12px;}
+.ref-archive .ref-card-icon {font-size:37px;color:#d5eee6;transform:rotate(13deg);}
+.ref-archive .journal-record:not(:first-child)::before {background:#f4f7f6;border:1px solid #10a58c;}
+.ref-archive .journal-record::before {left:-24px;width:10px;height:10px;}
+.ref-list-end {margin:42px 0 24px;text-align:center;color:#627277;font-size:11px;}
+.ref-list-end img {width:140px;margin:0 auto 7px;}
+.journal-group.ref-form-grid {grid-template-columns:repeat(2,minmax(0,1fr));column-gap:15px;}
+.ref-form-grid h2,.ref-form-grid #practiceEndRow {grid-column:1/-1;}
+.journal-group {border-radius:9px;box-shadow:0 2px 7px #223c3512;padding:12px;gap:11px;}
+.journal-group h2 i {color:#087766;font-size:12px;margin-right:5px;}
+.journal-group :is(input:not([type=checkbox]),select,textarea) {background:#fafbfb;border-color:#d4dadd;border-radius:7px;min-height:34px;}
+.ref-textarea {position:relative;display:block;}
+.ref-textarea textarea {display:block;padding-bottom:20px;}
+.ref-textarea small {position:absolute;bottom:7px;right:9px;color:#657481;font-size:10px;}
+.journal-save button {min-height:38px;border-radius:7px;background:#0c7567;}
+.ref-home .career-compass {width:44%;top:83px;right:10px;mask-image:linear-gradient(to right,transparent,#000 9%,#000 94%,transparent);}
+.ref-home .career-hero-pills {margin:28px 20px 0;}
+.ref-home .career-hero-pill {min-height:43px;}
+.ref-home .career-growth-card {min-height:61px;align-items:center;}
+.ref-home .career-section-heading {margin-block:14px 7px;}
+.ref-home .career-plan-card {padding:12px;}
+.ref-home .career-plan-top {gap:10px;}
+.ref-home .career-plan-icon {width:33px;height:33px;}
+.ref-home .career-stage-focus {padding:10px;margin-top:10px;}
+.ref-home .career-stage-focus p {margin-top:3px;}
+.ref-home .career-home-body {margin-top:-17px;}
+.ref-list-intro {background-size:auto 74%;background-color:#e5f7f0;}
+.ref-list-intro h2 {margin-top:0;}
+.ref-archive-intro {min-height:132px;padding-top:16px;padding-bottom:12px;}
+.ref-archive-intro p {margin-bottom:0;line-height:1.65;font-size:9.7px;}
+.ref-record .journal-tag {padding:4px 8px;}
+.ref-list .journal-record::before {background:#007857;width:9px;height:9px;left:-17px;}
+.ref-list .ref-record {padding-top:15px;}
+.journal-form {gap:11px;}
+.journal-group {gap:9px;padding:12px;}
+.journal-group.ref-form-grid {row-gap:14px;}
+.ref-field {font-size:10px;color:#293a48;font-weight:500;}
+.ref-field em {font-style:normal;color:#087766;}
+.ref-field-control {position:relative;display:block;}
+.ref-field-control > i {position:absolute;top:9px;left:7px;z-index:1;display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#e7f2ee;color:#168977;font-size:10px;pointer-events:none;}
+.journal-group .ref-field-control.has-icon :is(input,select,textarea) {padding-left:30px;}
+.journal-group .ref-field-control :is(input,select,textarea) {font-size:11px;}
+.journal-group .ref-textarea textarea {height:68px;resize:none;}
+.journal-save {padding-top:9px;}
